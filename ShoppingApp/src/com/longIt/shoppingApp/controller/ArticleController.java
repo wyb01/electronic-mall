@@ -16,9 +16,12 @@ import com.longIt.shoppingApp.service.ArticleServiceI;
 import com.longIt.shoppingApp.util.pager.PageModel;
 
 /**
- * @author 罗老师【Long】
- * Version:1.0
- * 备注：本套课程提供全部源码+笔记+相关开发工具+答疑服务
+ * @模块名：ShoppingApp
+ * @包名：  com.longIt.shoppingApp.controller
+ * @类名称：ArticleController
+ * @类描述：商品信息控制器
+ * @创建人：wyb
+ * @创建时间：2019年10月31日下午6:44:48
  */
 @Controller
 @RequestMapping("/article")
@@ -40,7 +43,7 @@ public class ArticleController {
             // 0001 ==> 0001     00010001 ==> 0001
 			String code = typeCode.substring(0, 4);
 			
-			//根据一级物品类型获取对应的二级物品类型信息
+			//根据"一级物品类型"获取对应的"二级物品类型"信息
 			List<ArticleType> seArticleTypes = articleService.findAllSecondArticleTypes(code+"%");
 			//将二级物品类型存放至 model
 			model.addAttribute("secondArticleTypes", seArticleTypes);

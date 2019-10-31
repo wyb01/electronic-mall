@@ -71,7 +71,7 @@ public class UserServiceImpl implements UserServiceI {
 	 */
 	@Override
 	public void saveUser(User user) {
-		// TODO Auto-generated method stub
+	
 		try {
 			//生成激活码
 			String active = UUID.randomUUID().toString();
@@ -129,7 +129,6 @@ public class UserServiceImpl implements UserServiceI {
 	 */
 	@Override
 	public String active(String activeCode) {
-		// TODO Auto-generated method stub
 		//根据激活码获取用户信息，如果找不到说明  激活码不正确，或者已经激活过
 		User user = userMapper.getUserByActive(activeCode);
 		if(user!=null) {

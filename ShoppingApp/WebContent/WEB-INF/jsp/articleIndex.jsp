@@ -14,15 +14,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>商品首页</title>
-
-
 </head>
-
 
 <body>
 	<!-- 横幅导航条开始 -->
 	<jsp:include page="/WEB-INF/jsp/common/nav.jsp"></jsp:include>
-
 
 	<!-- 横幅导航条结束 -->
 	<!--  横幅下方的主体开始 -->
@@ -74,14 +70,9 @@
 							      <a href="${pageContext.request.contextPath}/article/index.do?typeCode=${secondArticleType.code}"
 								class="btn btn-default">${fn:replace(secondArticleType.name,'-','')}</a>
 							   </c:otherwise>
-							    
 							 </c:choose>
-							
-						
 						</c:forEach>
 					</c:if>
-
-
 
 					<div>
 						<form
