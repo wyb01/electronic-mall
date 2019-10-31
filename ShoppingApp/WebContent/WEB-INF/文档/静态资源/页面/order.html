@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品详情</title>
+    <!-- Bootstrap core CSS -->
+    <link href="resources/bootstrap/css/bootstrap.css" rel="stylesheet" />
+     <link rel="stylesheet" href="resources/bootstrap/style.css" />
+    <link href="resources/css/taobao.css" rel="stylesheet" />
+   <script src="resources/jquery/jquery.js"></script>
+     
+  </head>
+  
+  <body>
+
+	
+
+  
+ <!-- 横幅导航条开始 -->
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" 
+          	data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">显示导航条</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="shop/index.action">疯狂购物</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="shop/index.action">首页</a></li>
+            <li><a href="shop/shopCar.action">购物车</a></li>
+            <li><a href="shop/order/showOrder.action">我的订单</a></li>
+          </ul>
+          
+           <ul class="nav navbar-nav navbar-right">
+                 <li><a href="#">
+                     <span style='color:red;'>管理员</span>
+                         ,先生,欢迎您!
+                         
+                     </a>
+                 </li>
+		               <li><a href="identity/logout.action">退出</a></li>
+                 
+		      
+           </ul>
+        </div><!-- /.nav-collapse -->
+        
+         
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+	
+	<!--  横幅下方的主体开始 -->
+    <div class="container">
+				<div class="table-responsive">
+				<table class="table table-hover table-bordered table-striped">
+					<thead>
+						<tr>
+							<th style="width: 15%">图片</th>
+							<th style="width: 50%">名称</th>
+							<th style="width: 10%">价格</th>
+							<th style="width: 8%">数量</th>
+							<th style="width: 7%">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						
+					 
+							<tr>
+								<td>
+									<img alt="商品图片" src="20130401_1_0001_1.jpg">
+								</td>
+								<td>
+									 苹果（APPLE）iPhone 5 16G版 3G手机（白色）WCDMA/GSM 全新设计，更薄、更轻、更快、更好的iPhone，以及卓越音效的EarPods耳机 
+								</td>
+								<td>
+									<span class="price">4899.0</span>
+					              	
+								</td>
+								<td>
+								</td>
+								<td>
+									<a href="shop/delete.action?id=1"
+										onclick="return confirm('确定要把\n  苹果（APPLE）iPhone 5 16G版 3G手机（白色）WCDMA/GSM 全新设计，更薄、更轻、更快、更好的iPhone，以及卓越音效的EarPods耳机  \n从购物车中删除吗？')">删除</a>
+									<a>收藏</a>
+								</td>
+							</tr>
+						
+					</tbody>
+				</table>
+			</div>
+				 
+			   
+				<div class="table-responsive">
+				<table class="table table-hover table-bordered table-striped">
+					<thead>
+						<tr>
+							<th style="width: 15%">图片</th>
+							<th style="width: 50%">名称</th>
+							<th style="width: 10%">价格</th>
+							<th style="width: 8%">数量</th>
+							<th style="width: 7%">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						
+					 
+							<tr>
+								<td>
+									<img alt="商品图片" src="20130401_1_0001_1.jpg">
+								</td>
+								<td>
+									 摩托罗拉 T5 公众对讲机 7折疯抢，便携之王，最具性价比，出游首选，数量有限，先到先得。 
+								</td>
+								<td>
+									<span class="price">399.0</span>
+					              	
+								</td>
+								<td>
+								</td>
+								<td>
+									<a href="shop/delete.action?id=36"
+										onclick="return confirm('确定要把\n  摩托罗拉 T5 公众对讲机 7折疯抢，便携之王，最具性价比，出游首选，数量有限，先到先得。  \n从购物车中删除吗？')">删除</a>
+									<a>收藏</a>
+								</td>
+							</tr>
+						
+					</tbody>
+				</table>
+			</div>
+				 
+			   
+	     
+
+      <footer>
+        <p>&copy; 版权所有，欢迎借鉴</p>
+      </footer>
+
+    </div><!--/.container-->
+    <!--  横幅下方的主体结束 -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   
+    <script src="resources/bootstrap/js/bootstrap.js"></script>
+
+    <script src="resources/js/taobao.js"></script>
+  </body>
+</html>

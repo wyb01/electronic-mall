@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>商品首页</title>
+<link href="resources/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="resources/css/taobao.css" rel="stylesheet" />
+</head>
+<script src="resources/jquery/jquery.js"></script>
+<script src="resources/bootstrap/js/bootstrap.js"></script>
+<body>
+	<!-- 横幅导航条开始 -->
+	<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">显示导航条</span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="shop/index.action">疯狂购物</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="shop/index.action">首页</a></li>
+					<li><a href="shop/shopCar.action">购物车</a></li>
+					<li><a href="shop/order/showOrder.action">我的订单</a></li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"> <span style='color: red;'></span>
+					</a></li>
+					<li><a href="identity/login-page.action">登录</a></li>
+					<li><a href="identity/showRegister.action">免费注册</a></li>
+				</ul>
+			</div>
+			<!-- /.nav-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+	<!-- 横幅导航条结束 -->
+	<!--  横幅下方的主体开始 -->
+	<div class="container">
+		<div class="row row-offcanvas row-offcanvas-right">
+			<!-- 侧边导航开始 -->
+			<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar"
+				role="navigation">
+				<div class="list-group">
+					<a href="shop/index.action?typeCode=0001"
+						class="list-group-item active">手机</a> <a
+						href="shop/index.action?typeCode=0002" class="list-group-item ">对讲机</a>
+
+					<a href="shop/index.action?typeCode=0003" class="list-group-item ">手机配件</a>
+
+					<a href="shop/index.action?typeCode=0004" class="list-group-item ">数码相机</a>
+
+					<a href="shop/index.action?typeCode=0005" class="list-group-item ">单反相机</a>
+
+					<a href="shop/index.action?typeCode=0006" class="list-group-item ">摄相机</a>
+
+					<a href="shop/index.action?typeCode=0007" class="list-group-item ">单电/微单相机</a>
+				</div>
+			</div>
+			<!--  侧边导航结束 -->
+			<!-- 内容主体开始 -->
+			<div class="col-xs-12 col-sm-9">
+				<p class="pull-right visible-xs">
+					<button type="button" class="btn btn-primary btn-xs"
+						data-toggle="offcanvas">显示导航条</button>
+				</p>
+				<div class="alert alert-info" role="alert">
+
+					<a href="shop/index.action?typeCode=00010001"
+						class="btn btn-default"> 苹果 </a> <a
+						href="shop/index.action?typeCode=00010002" class="btn btn-default">
+						华为 </a> <a href="shop/index.action?typeCode=00010003"
+						class="btn btn-default"> 诺基亚 </a> <a
+						href="shop/index.action?typeCode=00010004" class="btn btn-default">
+						联想 </a> <a href="shop/index.action?typeCode=00010005"
+						class="btn btn-default"> 魅族 </a> <a
+						href="shop/index.action?typeCode=00010006" class="btn btn-default">
+						索尼 </a> <a href="shop/index.action?typeCode=00010007"
+						class="btn btn-default"> 三星 </a> <a
+						href="shop/index.action?typeCode=00010008" class="btn btn-default">
+						HTC </a> <a href="shop/index.action?typeCode=00010009"
+						class="btn btn-default"> 摩托罗拉 </a>
+
+					<div>
+						<form action="shop/index.action" method="get">
+							<!-- 如果当前选择了商品的类型，仅在该类型下面进行搜索 -->
+							<input type="hidden" name="typeCode" value="0001" /> <input
+								name="keyword" value="" />
+							<button type="submit">搜索</button>
+						</form>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-6 col-lg-4">
+						<span class="thumbnail"> <a href="shop/detail.action?id=1">
+								<img src="20130401_1_0001_1.jpg" alt="...">
+								<p style="height: 20px; overflow: hidden;">苹果（APPLE）iPhone 5
+									16G版 3G手机（白色）WCDMA/GSM 全新设计，更薄、更轻、更快、更好的iPhone，以及卓越音效的EarPods耳机
+								</p>
+						</a>
+							<p>
+								<span class="price">4899.0</span>
+
+							</p>
+						</span>
+					</div>
+					<div class="col-xs-6 col-lg-4">
+						<span class="thumbnail"> <a href="shop/detail.action?id=2">
+								<img src="20130401_1_0001_1.jpg" alt="...">
+								<p style="height: 20px; overflow: hidden;">苹果（APPLE）iPhone 5
+									16G版 3G手机（黑色）WCDMA/GSM 全新设计，更薄、更轻、更快、更好的iPhone，以及卓越音效的EarPods耳机
+								</p>
+						</a>
+							<p>
+								<span class="price">4899.0</span>
+
+							</p>
+						</span>
+					</div>
+					<!--/.col-xs-6.col-lg-4-->
+
+					<div class="col-xs-6 col-lg-4">
+						<span class="thumbnail"> <a href="shop/detail.action?id=3">
+								<img src="20130401_1_0001_1.jpg" alt="...">
+								<p style="height: 20px; overflow: hidden;">苹果（APPLE）iPhone 4
+									8G版 3G手机（黑色）WCDMA/GSM 月末促销，支持升级iOS6，更多新体验！选择“购机返话费版”有惊喜！</p>
+						</a>
+							<p>
+								<span class="price">2899.0</span>
+
+							</p>
+						</span>
+					</div>
+					<!--/.col-xs-6.col-lg-4-->
+
+					<div class="col-xs-6 col-lg-4">
+						<span class="thumbnail"> <a href="shop/detail.action?id=4">
+								<img src="20130401_1_0001_1.jpg" alt="...">
+								<p style="height: 20px; overflow: hidden;">苹果（APPLE）iPhone 4
+									8G版 3G手机（白色）WCDMA/GSM 月末促销，依旧出色的iPhone！可升级iOS6系统！选择“特价返话费版”有惊喜！</p>
+						</a>
+							<p>
+								<span class="price">2899.0</span>
+
+							</p>
+						</span>
+					</div>
+
+					<div class="col-xs-6 col-lg-4">
+						<span class="thumbnail"> <a href="shop/detail.action?id=5">
+								<img src="20130401_1_0001_1.jpg" alt="...">
+								<p style="height: 20px; overflow: hidden;">苹果（APPLE）iPhone
+									4S 16G版 3G手机（白色）WCDMA/GSM 经典的4S，值得拥有！</p>
+						</a>
+							<p>
+								<span class="price">4199.0</span>
+
+							</p>
+						</span>
+					</div>
+					<!--/.col-xs-6.col-lg-4-->
+
+					<div class="col-xs-6 col-lg-4">
+						<span class="thumbnail"> <a href="shop/detail.action?id=6">
+								<img src="20130401_1_0001_1.jpg" alt="...">
+								<p style="height: 20px; overflow: hidden;">苹果（APPLE）iPhone
+									4S 16G版 3G手机（黑色）WCDMA/GSM 经典的4S，值得拥有！</p>
+						</a>
+							<p>
+								<span class="price">4199.0</span>
+
+							</p>
+						</span>
+					</div>
+					<!--/.col-xs-6.col-lg-4-->
+
+					<div class="col-xs-6 col-lg-4">
+						<span class="thumbnail"> <a href="shop/detail.action?id=7">
+								<img src="20130401_1_0001_1.jpg" alt="...">
+								<p style="height: 20px; overflow: hidden;">苹果（APPLE）iPhone 5
+									16G版 3G手机（白色）电信版</p>
+						</a>
+							<p>
+								<span class="price">4799.0</span>
+
+							</p>
+						</span>
+					</div>
+					<!--/.col-xs-6.col-lg-4-->
+
+					<div class="col-xs-6 col-lg-4">
+						<span class="thumbnail"> <a href="shop/detail.action?id=8">
+								<img src="20130401_1_0001_1.jpg" alt="...">
+								<p style="height: 20px; overflow: hidden;">苹果（APPLE）iPhone 5
+									16G版 3G手机（黑色）电信版</p>
+						</a>
+							<p>
+								<span class="price">4799.0</span>
+
+							</p>
+						</span>
+					</div>
+					<!--/.col-xs-6.col-lg-4-->
+
+				</div>
+				<!--/row-->
+
+
+				<!-- p2是url前段部分pageNumber=之前 -->
+
+
+				<!--  分页开始 -->
+
+				<div class="row">
+					<nav>
+						<ul class="pagination">
+							<div>
+								<a href="javascript:goPage(1)">首页</a> <a
+									href='javascript:goPage(1)'>上一页</a> <a
+									href='javascript:goPage(2)'>下一页</a> <a
+									href='javascript:goPage(7)'>尾页</a> &nbsp; <span>第&nbsp;
+									1&nbsp;页/共&nbsp; 7页 ，共 52 条数据 </span>
+							</div>
+						</ul>
+				</div>
+				<!-- 分页结束 -->
+			</div>
+			<!--/.col-xs-12.col-sm-9-->
+			<!-- 内容主体结束 -->
+		</div>
+		<!--/row-->
+		<hr>
+		<footer>
+			<p>&copy; 版权所有，欢迎借鉴</p>
+		</footer>
+	</div>
+</body>
+</html>

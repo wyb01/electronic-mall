@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.longIt.shoppingApp.mapper.ArticleMapper">
+
+        <!-- 根据商品类型获取商品的信息 -->
+        <select id="findAllArticle" resultType="com.longIt.shoppingApp.bean.Article">
+          
+            select * from ec_article  
+            <where>
+               <if test="typeCode != null ">
+                  type_code like  #{typeCode}
+               </if>
+               
+                <if test="keyword != null ">
+                  and title like #{keyword}
+               </if>
+            </where>
+            limit  #{pageModel.startNum},#{pageModel.pageSize}
+        </select>
+        
+        <!-- 获取商品总记录数 -->
+        <select id="findTotalNum" resultType="int">
+             select count(*) from ec_article
+             <where>
+               <if test="typeCode != null ">
+                  type_code like  #{typeCode}
+               </if>
+               
+                <if test="keyword != null ">
+                  and title like #{keyword}
+               </if>
+            </where>
+        </select>
+</mapper>

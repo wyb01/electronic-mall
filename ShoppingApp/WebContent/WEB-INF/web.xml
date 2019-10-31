@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>ShoppingApp</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+      <!-- 配置Spring的监听器 -->
+      <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+     </listener>
+     
+     <!-- 指定spring相关配置文件存放位置 -->
+     <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/applicationContext*.xml</param-value>
+     </context-param>
+     
+     
+     <!-- 声明拦截器防止post请求中文乱码问题 -->
+     <filter>
+        <filter-name>characterEnconding</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+           <param-name>encoding</param-name>
+           <param-value>utf-8</param-value>
+        </init-param>
+     </filter>
+     
+     <filter-mapping>
+        <filter-name>characterEnconding</filter-name>
+        <url-pattern>/*</url-pattern>
+     </filter-mapping>
+     
+     <!-- 配置Spring Mvc的前端控制器 -->
+     <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+             <param-name>contextConfigLocation</param-name>
+             <param-value>/WEB-INF/springmvc-config.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+     </servlet>
+     
+     <servlet-mapping>
+          <servlet-name>springmvc</servlet-name>
+          <!-- /会将所有的静态资源都拦截，意味着 图片 css样式  js文件都会被拦截掉 -->
+          <url-pattern>/</url-pattern>
+     </servlet-mapping>
+</web-app>

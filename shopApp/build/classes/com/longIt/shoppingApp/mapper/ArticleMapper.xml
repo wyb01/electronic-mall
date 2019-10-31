@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.longIt.shoppingApp.mapper.ArticleMapper">
+
+       <!-- 分页查询商品信息 -->
+       <select id="getAllArticles" resultType="com.longIt.shoppingApp.bean.Article">
+          select * from ec_article  where disabled = '0'
+          
+            <if test="typeCode !=null  &amp;&amp;  typeCode != '' ">
+                and type_code like CONCAT("",#{typeCode},"%")
+            </if>
+            
+            <if test="title !=null &amp;&amp; title != '' ">
+               and title like CONCAT("%",#{title},"%")
+            </if>
+            
+            limit #{pageModel.startNum} , #{pageModel.pageSize}
+       
+       </select>
+       
+       <!-- 查询商品总记录数 -->
+       <select id="getTotalNum" resultType="int">
+          select count(*) from ec_article  where disabled = '0'
+          
+            <if test="typeCode !=null  &amp;&amp;  typeCode != '' ">
+                and type_code like CONCAT("",#{typeCode},"%")
+            </if>
+            
+            <if test="title !=null &amp;&amp; title != '' ">
+               and title like CONCAT("%",#{title},"%")
+            </if>
+            
+       
+       </select>
+       
+       
+       <insert id="saveArtice">
+              insert into ec_article(title, supplier, price, locality, putaway_date,
+        storage, image, description, type_code, create_date)
+        values(#{title}, #{supplier}, #{price}, #{locality},
+        #{putawayDate}, #{storage}, #{image},
+        #{description}, #{typeCode}, #{createDate})
+       </insert>
+       
+       <update id="updateArticle">
+            update ec_article
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="title != null">title = #{title},</if>
+            <if test="supplier != null">supplier = #{supplier},</if>
+            <if test="price != null">price = #{price},</if>
+            <if test="locality != null">locality = #{locality},</if>
+            <if test="putawayDate != null">putaway_date = #{putawayDate},</if>
+            <if test="storage != null">storage = #{storage},</if>
+            <if test="image != null">image = #{image},</if>
+            <if test="description != null">description = #{description},</if>
+            <if test="typeCode != null">type_code = #{typeCode},</if>
+        </trim>
+        <where> id = #{id}</where>
+       </update>
+       
+</mapper>
