@@ -8,11 +8,20 @@
    2、shopApp：后端       管理员维护商品
 
 
+   配置：
+
     (1)、需要把 lib 下 jar包 add to build 
 
     (2)、配置tomcat，Mudules - path : "/"
 
     (3)、前端ShoppingApp需要  Java Build Path - Libraries - Add Library - Server Runtime 添加tomcat 	
              以使项目依赖tomcat的 servel-api.jar (导入HttpSession类)
+
+
+
+
+    功能介绍：
+
+      1、前端用户注册后，发送邮件进行激活，激活成功可以登录
  
 
